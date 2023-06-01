@@ -43,6 +43,8 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'rubocop-rails', '~> 2.19', '>= 2.19.1'
   gem 'rubocop-capybara', '~> 2.18'
+  # Adds the RSpec testing framework
+  gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do
