@@ -1,0 +1,13 @@
+<h1>Cities</h1>
+
+<%= form_tag root_path, method: :get do %>
+  <%= label_tag :query, "Search by name" %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<div id="cities">
+  <% @cities.each do |city| %>
+    <%= city.pg_search_highlight.html_safe %><br>
+  <% end %>
+</div>

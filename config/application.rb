@@ -2,6 +2,7 @@ require_relative 'boot'
 
 require 'rails/all'
 require 'dotenv-rails'
+require 'selenium-webdriver'
 require 'warning'
 
 # Require the gems listed in Gemfile, including any gems
