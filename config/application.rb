@@ -1,10 +1,15 @@
 require_relative 'boot'
 
 require 'rails/all'
+require 'warning'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+
+# Ignore a few internal gem warnings we can do nothing about
+[/Using the last argument as keyword parameters is deprecated/,
+ /The called method `.*' is defined here/].each { |warning| Warning.ignore(warning) }
 
 module CityFinder
   class Application < Rails::Application
