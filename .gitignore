@@ -51,3 +51,6 @@
 
 # Editor-based Rest Client
 .idea/httpRequests
+
+# local env files
+.env*.local

@@ -1,11 +1,15 @@
 require_relative 'boot'
 
 require 'rails/all'
+require 'dotenv-rails'
 require 'warning'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+
+# Load dotenv only in development or test environment
+Dotenv::Railtie.load if %w[development test].include? ENV['RAILS_ENV']
 
 # Ignore a few internal gem warnings we can do nothing about
 [/Using the last argument as keyword parameters is deprecated/,

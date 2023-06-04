@@ -47,6 +47,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
   # Adds custom processing for warnings
   gem 'warning', '~> 0.10.1'
+  # Loads variables from .env.local
+  gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 end
 
 group :development do
