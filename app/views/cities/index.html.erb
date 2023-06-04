@@ -1,8 +1,10 @@
 <h1>Cities</h1>
 
-<%= form_tag root_path, method: :get do %>
+<%= form_tag root_path, method: :get, class: "search-form" do %>
   <%= label_tag :query, "Search by name" %>
   <%= text_field_tag :query, params[:query] %>
+  <%= label_tag :state, "Select state" %>
+  <%= select_tag :state, options_for_select(@state_options, params[:state]) %>
   <%= submit_tag "Search" %>
 <% end %>
 
