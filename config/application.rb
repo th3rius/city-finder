@@ -16,7 +16,9 @@ Dotenv::Railtie.load if %w[development test].include? ENV['RAILS_ENV']
 
 # Ignore a few internal gem warnings we can do nothing about
 [/Using the last argument as keyword parameters is deprecated/,
- /The called method `.*' is defined here/].each { |warning| Warning.ignore(warning) }
+ /The called method `.*' is defined here/,
+ /already initialized constant .*/,
+ /previous definition of .* was here/].each { |warning| Warning.ignore(warning) }
 
 module CityFinder
   # Main application
