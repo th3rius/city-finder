@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Cities', type: :request do
+RSpec.describe 'Cities' do
   describe 'GET /index' do
     pending "add some examples (or delete) #{__FILE__}"
   end

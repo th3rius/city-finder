@@ -48,6 +48,7 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'rubocop-capybara', '~> 2.18'
   gem 'rubocop-rails', '~> 2.19', '>= 2.19.1'
+  gem 'rubocop-rspec', '~> 2.22'
   # Adds the RSpec testing framework
   gem 'rspec-rails', '~> 5.0.0'
   # Adds custom processing for warnings

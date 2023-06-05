@@ -4,6 +4,7 @@ AllCops:
 require:
   - rubocop-rails
   - rubocop-capybara
+  - rubocop-rspec
 
 Metrics/CollectionLiteralLength:
   Exclude:
