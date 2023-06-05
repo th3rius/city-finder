@@ -79,6 +79,7 @@ $ docker-compose up -d
 ```
 
 and docker-compose will take care of building, preparing a database and setting everything up for you.
+Visit the application at [http://localhost:3000](http://localhost:3000).
 
 ## Running automated tests
 
