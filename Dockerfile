@@ -19,4 +19,4 @@ RUN apt-get update && apt-get install -y nodejs npm \
 COPY . .
 
 # Prepare the database and run the application
-CMD rails db:setup && rails s
+CMD rails db:setup && rails s --binding 0.0.0.0
