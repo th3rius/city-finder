@@ -6,7 +6,10 @@
   <% end %>
 
   <% if params[:query].blank? %>
-    <p>Enter a search query to find cities in Brazil.</p>
+    <div class="no-content">
+      <%= image_tag "buildings.png" %>
+      <p>Enter a search query to find cities in Brazil.</p>
+    </div>
   <% elsif @cities.any? %>
     <table class="cities-table">
       <thead>
@@ -33,6 +36,8 @@
       </tbody>
     </table>
   <% else %>
-    <p>Oops! Seems we were unable to find your city. Try another search?</p>
+    <div class="no-content">
+      <p>Oops! Seems we were unable to find your city. Try another search?</p>
+    </div>
   <% end %>
 </div>

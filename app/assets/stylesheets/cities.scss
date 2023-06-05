@@ -69,6 +69,15 @@ $mat-input-shadow-focus: rgba(0, 0, 0, 0.2) 0 2px 4px -1px,
   }
 }
 
+.no-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.54);
+}
+
 .cities-table {
   width: 100%;
   margin-top: 24px;
