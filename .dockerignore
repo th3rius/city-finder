@@ -1,0 +1,8 @@
+# tempfiles
+/tmp/*
+
+# node dependencies
+/node_modules
+
+# local env files
+.env*.local

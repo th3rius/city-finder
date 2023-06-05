@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - '${PORT:-3000}:3000'
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://postgres:abacate@db:5432/city_finder
+      RAILS_ENV: '${RAILS_ENV:-development}'
+    networks:
+      - city_finder
+
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_PASSWORD: abacate
+    networks:
+      - city_finder
+
+networks:
+  city_finder:
