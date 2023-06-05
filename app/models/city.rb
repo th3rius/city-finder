@@ -10,7 +10,7 @@ class City < ApplicationRecord
       dictionary: 'portuguese',
       prefix: true,
       highlight: {
-        StartSel: '<b>',
+        StartSel: '<b class="highlighted">',
         StopSel: '</b>'
       }
     }

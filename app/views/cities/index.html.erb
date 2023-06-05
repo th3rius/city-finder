@@ -1,15 +1,32 @@
-<h1>Cities</h1>
-
-<%= form_tag root_path, method: :get, class: "search-form" do %>
-  <%= label_tag :query, "Search by name" %>
-  <%= text_field_tag :query, params[:query] %>
-  <%= label_tag :state, "Select state" %>
-  <%= select_tag :state, options_for_select(@state_options, params[:state]) %>
-  <%= submit_tag "Search" %>
-<% end %>
-
-<div id="cities">
-  <% @cities.each do |city| %>
-    <%= city.pg_search_highlight.html_safe %><br>
+<div class="form-card">
+  <%= form_tag root_path, method: :get, class: "search-form" do %>
+    <%= text_field_tag :query, params[:query], placeholder: "Type a city name", class: "search-field" %>
+    <%= select_tag :state, options_for_select(@state_options, params[:state]), class: "states-select" %>
+    <%= submit_tag "Search", class: "submit-button" %>
   <% end %>
+
+  <table class="cities-table">
+    <thead>
+      <tr>
+        <th>IBGE Code</th>
+        <th>Name</th>
+        <th>State</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @cities.each do |city| %>
+        <tr>
+          <td>
+            <%= city.ibge_code %>
+          </td>
+          <td>
+            <%= city.pg_search_highlight.html_safe %>
+          </td>
+          <td>
+            <%= city.state.name %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>

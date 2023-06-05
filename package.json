@@ -1,5 +1,7 @@
 {
   "name": "city-finder",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@fontsource/roboto": "^5.0.2"
+  }
 }
