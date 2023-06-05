@@ -5,15 +5,18 @@
     <%= submit_tag "Search", class: "submit-button" %>
   <% end %>
 
-  <table class="cities-table">
-    <thead>
+  <% if params[:query].blank? %>
+    <p>Enter a search query to find cities in Brazil.</p>
+  <% elsif @cities.any? %>
+    <table class="cities-table">
+      <thead>
       <tr>
         <th>IBGE Code</th>
         <th>Name</th>
         <th>State</th>
       </tr>
-    </thead>
-    <tbody>
+      </thead>
+      <tbody>
       <% @cities.each do |city| %>
         <tr>
           <td>
@@ -27,6 +30,9 @@
           </td>
         </tr>
       <% end %>
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  <% else %>
+    <p>Oops! Seems we were unable to find your city. Try another search?</p>
+  <% end %>
 </div>
