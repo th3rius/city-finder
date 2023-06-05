@@ -51,7 +51,7 @@ To get started, first install all the application dependencies:
 ```shell
 # Install gems:
 $ bundle
-# Install npm packages (you need warn installed):
+# Install npm packages (you need yarn installed):
 $ rails yarn:install
 ```
 
