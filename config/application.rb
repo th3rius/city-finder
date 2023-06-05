@@ -19,6 +19,7 @@ Dotenv::Railtie.load if %w[development test].include? ENV['RAILS_ENV']
  /The called method `.*' is defined here/].each { |warning| Warning.ignore(warning) }
 
 module CityFinder
+  # Main application
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2

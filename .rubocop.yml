@@ -4,3 +4,7 @@ AllCops:
 require:
   - rubocop-rails
   - rubocop-capybara
+
+Metrics/CollectionLiteralLength:
+  Exclude:
+    - db/seeds.rb

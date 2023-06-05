@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Controller for the main search page
 class CitiesController < ApplicationController
   def index
     @state_options = State.order(:name)
